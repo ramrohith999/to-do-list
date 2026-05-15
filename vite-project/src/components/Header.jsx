@@ -1,6 +1,6 @@
 const Header=()=>{
     return(
-        <header>
+        <header className="header">
           <h1>React To-do-List App</h1>
         </header>
     )
