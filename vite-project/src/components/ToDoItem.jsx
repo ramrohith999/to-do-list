@@ -1,6 +1,14 @@
+import { useState } from "react";
+
+
 const ToDoItem = ({ task, deleteTask, toggleComplete, editTask }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newText, setNewText] = useState(task.text);
+
+  const handleEdit = () => {
+    editTask(task.id, newText);
+    setIsEditing(false);
+  };
 
   return (
     <div className="task-item">
